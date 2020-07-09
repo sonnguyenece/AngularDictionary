@@ -1,0 +1,13 @@
+<table class="table table-striped table-dark text-center col-md-6 offset-md-3">
+  <tr *ngFor="let word of words">
+    <td class="text-primary">{{word.id}}</td>
+    <td class="text-secondary "><a [routerLink]="['/DicDetail',word.id]"> {{word.enWord}}</a></td>
+    <!--    <td class="text-secondary "><a routerLink="/DicDetail/{{word.id}}"> {{word.enWord}}</a></td>-->
+    <!--    <td class="text-secondary "><a routerLink="{{word.id}}"> {{word.enWord}}</a></td>-->
+    <td class="text-info ">{{word.vnWord}}</td>
+  </tr>
+</table>
+
+Translate into Vietnamese <input type="text" name="lookup" id="lookup" (input)="lookup($event.target.value)">
+<i>{{word}}</i>
+<router-outlet></router-outlet>
